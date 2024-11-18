@@ -1,13 +1,11 @@
 void main() {
-  // กำหนดตัวแปร
-  int dividend = 10; // ตัวตั้ง
-  int divisor = 3;    // ตัวหาร
+ 
+  int dividend = 10; 
+  int divisor = 3;    
 
-  // หาผลหารและเศษเหลือ
-  int quotient = dividend ~/ divisor; // ~/ ใช้หารจำนวนเต็ม เพื่อปัดเศษทิ้ง
+  int quotient = dividend ~/ divisor; 
   int remainder = dividend % divisor;
 
-  // แสดงผลลัพธ์
   print('quotient = $quotient');
   print('remainder = $remainder');
 }
