@@ -1,11 +1,21 @@
+import 'dart:io';
+
 double calculateArea({double length = 1, double width = 1}) {
-  
-  return length * width;
+  return length * width;  
 }
 
 void main() {
   
-  print('พื้นที่ (ค่าเริ่มต้น 1x1): ${calculateArea()}'); 
-  print('พื้นที่ (5x3): ${calculateArea(length: 5, width: 3)}'); 
-  print('พื้นที่ (7x2): ${calculateArea(length: 7, width: 2)}'); 
+  print('กรุณาป้อนความยาว (length):');
+  String? lengthInput = stdin.readLineSync();
+  
+  print('กรุณาป้อนความกว้าง (width):');
+  String? widthInput = stdin.readLineSync();
+  
+  
+  double length = lengthInput != null && lengthInput.isNotEmpty ? double.parse(lengthInput) : 1.0;
+  double width = widthInput != null && widthInput.isNotEmpty ? double.parse(widthInput) : 1.0;
+  
+  double area = calculateArea(length: length, width: width);
+  print('พื้นที่ของสี่เหลี่ยมผืนผ้า: $area');
 }

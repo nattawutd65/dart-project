@@ -1,12 +1,18 @@
-import 'dart:io';
-
+import 'dart:io'; 
 void main() {
-  print('กรุณากรอกเลข:');
-  int number = int.parse(stdin.readLineSync()!);
+  
+  print('กรุณาป้อนตัวเลข:');
+  String? input = stdin.readLineSync(); 
 
-  if (number % 2 == 0) {
-    print('$number เป็นเลขคู่');
+  if (input != null) {
+    int number = int.parse(input); 
+
+    if (number % 2 == 0) {
+      print('$number เป็นเลขคู่');
+    } else {
+      print('$number เป็นเลขคี่');
+    }
   } else {
-    print('$number เป็นเลขคี่');
+    print('กรุณาป้อนข้อมูลที่ถูกต้อง');
   }
 }
